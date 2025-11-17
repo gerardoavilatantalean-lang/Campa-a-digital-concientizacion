@@ -1,77 +1,106 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Digitaliza tu Identidad</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digitaliza Tu Identidad</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-    <!-- HEADER -->
-    <header id="header">
-        <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#patrimonio">Patrimonio</a>
-            <a href="#acciones">Acciones</a>
-        </nav>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <h1>🛑 NO SEAS UN EXTRAÑO EN TU PROPIA HISTORIA 🛑</h1>
+        <p class="subtitulo">Campaña: <strong>Digitaliza tu Identidad</strong></p>
+        <a href="#acciones" class="boton-explorar">EXPLORA NUESTRAS ACCIONES CLAVE</a>
     </header>
 
-    <!-- INICIO -->
-    <section id="inicio" class="hero">
-        <h1>🛑 NO SEAS UN EXTRAÑO EN TU PROPIA HISTORIA 🛑</h1>
-        <p>Únete a nuestra campaña para digitalizar tu identidad y convertir la historia local en acciones ciudadanas reales.</p>
-        <button onclick="scrollToSection('acciones')">EXPLORAR ACCIONES</button>
+    <!-- SITUACIÓN SIGNIFICATIVA -->
+    <section class="card fade-in" id="situacion">
+        <h2>📌 Situación Significativa</h2>
+
+        <p>
+            En nuestra institución educativa Fe y Alegría 36 se ha identificado que muchos estudiantes presentan 
+            <strong>dificultades para comprender textos, analizar información y resolver problemas</strong>, lo que limita su 
+            capacidad para interpretar la realidad de su entorno y participar activamente en el desarrollo de su comunidad.
+        </p>
+
+        <p>
+            También se observa que no siempre reconocen la importancia de su 
+            <strong>historia local, identidad regional y gestión responsable de los recursos económicos</strong>.
+        </p>
+
+        <p>
+            Por ello, se plantea una experiencia de aprendizaje que vincula competencias ciudadanas, comunicativas y digitales, 
+            donde los estudiantes comprenden, analicen y comuniquen información relevante sobre su comunidad y propongan 
+            <strong>acciones concretas que promuevan el bienestar común, la convivencia democrática y el desarrollo sostenible</strong>.
+        </p>
+
+        <h3>❓ Preguntas retadoras</h3>
+        <ul>
+            <li>¿Cómo conocer nuestra historia nos ayuda a comprender quiénes somos y hacia dónde vamos?</li>
+            <li>¿De qué manera los recursos naturales, económicos y culturales pueden usarse responsablemente?</li>
+            <li>¿Qué acciones pueden proponer los estudiantes para fortalecer la identidad y convivencia democrática?</li>
+        </ul>
     </section>
 
-    <!-- PATRIMONIO -->
-    <section id="patrimonio">
-        <h2>🗺️ Nuestro Patrimonio y Recursos</h2>
+    <!-- VIDEOS SOBRE PROBLEMAS DIGITALES -->
+    <section class="card fade-in" id="videos">
+        <h2>🎥 Videos para Comprender Mejor los Problemas Digitales</h2>
+        <p>
+            Estos videos permiten entender los principales problemas de la identidad digital, la convivencia en línea 
+            y los riesgos del entorno digital. No muestran soluciones, sino que ayudan a reconocer los desafíos.
+        </p>
 
-        <article>
-            <h3>A. La Fuerza de Nuestra Historia</h3>
-            <p>El conocimiento histórico local es la base de nuestra identidad y fortalece nuestra convivencia democrática.</p>
-        </article>
+        <div class="videos-grid">
+            <iframe width="100%" height="250" 
+                src="https://www.youtube.com/embed/UQgtq3ZPT5o"
+                title="Video 1" frameborder="0" allowfullscreen></iframe>
 
-        <article>
-            <h3>B. Riqueza Sostenible</h3>
-            <p>La tecnología permite usar nuestro patrimonio de forma responsable, impulsando turismo digital y cultura sostenible.</p>
-        </article>
+            <iframe width="100%" height="250" 
+                src="https://www.youtube.com/embed/1lpQmgzFQiQ"
+                title="Video 2" frameborder="0" allowfullscreen></iframe>
+        </div>
     </section>
 
-    <!-- ACCIONES -->
-    <section id="acciones">
-        <h2>📢 Propuestas de Acción Ciudadana</h2>
+    <!-- ACCIONES CIUDADANAS -->
+    <section class="card fade-in" id="acciones">
+        <h2>🚀 Acciones Ciudadanas Propuestas</h2>
 
-        <div class="acciones">
-            <div class="accion-card">
-                <h3>1. Mapa Interactivo</h3>
-                <p>Explora puntos culturales de tu comunidad.</p>
-                <div class="video-box">
-                    <iframe width="100%" height="230" src="https://www.youtube.com/embed/UQgtq3ZPT5o" frameborder="0" allowfullscreen></iframe>
-                </div>
+        <div class="acciones-grid">
+            <div class="accion">
+                <h3>🗺️ Mapa Interactivo de Identidad</h3>
+                <p>Un recurso para ubicar los elementos culturales, históricos y comunitarios de nuestra zona.</p>
             </div>
 
-            <div class="accion-card">
-                <h3>2. El Pacto del Netiquette</h3>
-                <p>Normas digitales para una convivencia respetuosa.</p>
-                <button onclick="alert('¡Gracias por comprometerte con una ciudadanía digital responsable!')">Firmar Pacto</button>
+            <div class="accion">
+                <h3>🤝 Pacto del Netiquette</h3>
+                <p>Normas creadas por los estudiantes para promover respeto digital y convivencia democrática.</p>
             </div>
 
-            <div class="accion-card">
-                <h3>3. Reels de Denuncia Sostenible</h3>
-                <p>Publica videos cortos denunciando daños ambientales.</p>
-                <div class="video-box">
-                    <iframe width="100%" height="230" src="https://www.youtube.com/embed/1lpQmgzFQiQ" frameborder="0" allowfullscreen></iframe>
-                </div>
+            <div class="accion">
+                <h3>📹 Reels de Denuncia Sostenible</h3>
+                <p>Videos cortos para visibilizar y denunciar el daño ambiental o cultural en nuestra comunidad.</p>
             </div>
         </div>
     </section>
 
+    <!-- CONCLUSIÓN -->
+    <section class="card fade-in" id="conclusion">
+        <h2>📘 Conclusión</h2>
+        <p>
+            La ciudadanía digital es una responsabilidad compartida. Conocer nuestra historia, proteger nuestra identidad digital 
+            y actuar con respeto en línea permite construir una comunidad democrática, sostenible y consciente.
+        </p>
+        <p><strong>La tecnología es una herramienta poderosa… si la usamos con identidad y responsabilidad.</strong></p>
+    </section>
+
     <!-- FOOTER -->
     <footer>
-        <p>Campaña Digitaliza tu Identidad – Fe y Alegría 36</p>
-        <p>Contacto: correo@ejemplo.com</p>
+        <p>© 2025 - Campaña “Digitaliza Tu Identidad”</p>
     </footer>
+
 </body>
 </html>
+
