@@ -1,113 +1,139 @@
-/* Estilo general */
 body {
-    font-family: Arial, sans-serif;
-    background: #f5f6ff;
     margin: 0;
-    padding: 0;
-    color: #1a1a1a;
-    line-height: 1.6;
+    font-family: Arial, sans-serif;
+    background: #f2f7ff;
 }
 
-/* Header */
+/* HEADER */
 header {
-    background: linear-gradient(135deg, #0044cc, #007bff);
+    background: linear-gradient(90deg, #0044ff, #ff0044);
     color: white;
+    padding: 40px;
     text-align: center;
-    padding: 50px 20px;
-    animation: fade 1.5s ease-in;
 }
 
-.subtitulo {
-    margin-top: -10px;
-    font-size: 18px;
-    opacity: 0.9;
+nav {
+    background: #002b80;
+    padding: 15px;
+    text-align: center;
 }
 
-.boton-explorar {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 12px 25px;
-    background: white;
-    color: #003399;
-    font-weight: bold;
-    border-radius: 10px;
+nav a {
+    color: white;
+    margin: 0 15px;
     text-decoration: none;
-    transition: .3s;
+    font-weight: bold;
 }
 
-.boton-explorar:hover {
-    background: #ffd000;
-    transform: scale(1.08);
+.section {
+    padding: 40px;
 }
 
-/* Tarjetas */
-.card {
-    width: 90%;
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 25px;
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.video-card {
     background: white;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+video {
+    width: 100%;
+    border-radius: 8px;
+}
+
+/* PROPUESTAS */
+.propuesta-list {
+    display: grid;
+    gap: 20px;
+}
+
+.propuesta {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
     transition: 0.3s;
 }
 
-.card:hover {
-    transform: translateY(-5px);
+.propuesta:hover {
+    background: #e6f0ff;
 }
 
-/* Animación de aparición */
-.fade-in {
-    opacity: 0;
-    animation: aparecer 1.3s forwards;
+.info {
+    display: none;
+    padding-top: 5px;
 }
 
-@keyframes aparecer {
-    0% { opacity: 0; transform: translateY(20px); }
-    100% { opacity: 1; transform: translateY(0); }
-}
-
-/* Grid de videos */
-.videos-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-/* Acciones */
-.acciones-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-
-.accion {
-    padding: 20px;
-    background: #eef2ff;
-    border-radius: 12px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
-    transition: .3s;
-}
-
-.accion:hover {
-    background: #dce4ff;
-    transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-    margin-top: 40px;
-    text-align: center;
-    background: #003399;
+/* ASISTENTE VIRTUAL */
+.bot-button {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    background: #0044ff;
     color: white;
-    padding: 15px 0;
+    border: none;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 22px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 700px) {
-    .videos-grid,
-    .acciones-grid {
-        grid-template-columns: 1fr;
-    }
+.bot-window {
+    position: fixed;
+    bottom: 90px;
+    right: 25px;
+    width: 300px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.3);
+    display: none;
+    flex-direction: column;
 }
+
+.bot-header {
+    background: #0044ff;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bot-chat {
+    height: 220px;
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.bot-input-area {
+    display: flex;
+    border-top: 1px solid #ccc;
+}
+
+.bot-input-area input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+}
+
+.bot-input-area button {
+    background: #0044ff;
+    color: white;
+    border: none;
+    padding: 10px;
+}
+
+.bubble {
+    background: #e6eaff;
+    padding: 8px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+}
+
