@@ -54,11 +54,15 @@ function addMessage(sender, message) {
 function generateResponse(msg) {
     msg = msg.toLowerCase();
 
-    if (msg.includes("hola")) return "¡Hola! ¿En qué puedo ayudarte con respecto a tus dudas sobre la campaña campaña?";
+    if (msg.includes("hola")) return "¡Hola! ¿En qué puedo ayudarte con respecto a tus dudas sobre la campaña?";
     if (msg.includes("problema")) return "El problema principal es el mal uso de la tecnología, ciberacoso y desinformación.";
     if (msg.includes("propuestas")) return "Tenemos opcciones variadas frente a esos problemas , brigadas digitales, buzón anónimo, charlas informativas,anucios llenos de informacion y más.";
     if (msg.includes("video")) return "Los videos te ayudan a identificar el ciberacoso y la desinformación de una mejor manera.";
-
+    if (msg.includes("proposito")) return "El proposito de la campaña es brindar mejores soluciones a los problemas que estamos afrontando, soluciones viables y eficientes.";
+    if (msg.includes("estoi trizte")) return "Lamento mucho que estes trizte pero mi proposito real es brindarte informacion acerca de tus posibles dudas.";
+    if (msg.includes("quien eres")) return "Soi tu asistente virtual, atendere todas tus dudas sobre la campaña.";
+    
     return "No entendí bien, pero puedo ayudarte con dudas del problema, propuestas o videos.";
 }
+
 
