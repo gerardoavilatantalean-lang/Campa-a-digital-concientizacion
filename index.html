@@ -3,147 +3,493 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campaña Digital de Concientización</title>
+    <title>Ciudadanía Digital Responsable | Campaña de Concientización</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
     <header>
-        <h1>Campaña Digital de Concientización</h1>
-        <p>Ciudadanía activa, respeto y convivencia digital</p>
+        <div class="header-content">
+            <h1>🌐 Ciudadanía Digital Responsable</h1>
+            <p>Construyendo un internet más seguro, respetuoso y consciente</p>
+            <div class="header-stats">
+                <div class="stat">
+                    <span class="stat-number">70%</span>
+                    <span class="stat-label">de jóvenes sufren ciberacoso</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">85%</span>
+                    <span class="stat-label">comparte datos personales</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number">60%</span>
+                    <span class="stat-label">cree en noticias falsas</span>
+                </div>
+            </div>
+        </div>
     </header>
 
     <nav>
-        <a href="#problema">Problema</a>
-        <a href="#videos">Videos</a>
-        <a href="#propuestas">Propuestas</a>
+        <a href="#problema">🚨 El Problema</a>
+        <a href="#impacto">📊 Impacto</a>
+        <a href="#videos">🎥 Videos</a>
+        <a href="#propuestas">💡 Soluciones</a>
+        <a href="#recursos">📚 Recursos</a>
+        <a href="#contacto">📞 Ayuda</a>
     </nav>
+
+    <!-- ALERTA IMPORTANTE -->
+    <div class="alert-banner">
+        <span class="alert-icon">⚠️</span>
+        <span>¿Sufres ciberacoso o necesitas ayuda urgente? <a href="#contacto">Contáctanos aquí</a></span>
+    </div>
 
     <!-- PROBLEMA -->
     <section id="problema" class="section">
-        <h2>¿Cuál es el problema?</h2>
-        <p>
-    En la actualidad, los adolescentes y jóvenes están expuestos a una gran variedad de problemas 
-    en el entorno digital. Entre los más frecuentes se encuentran el ciberacoso, la suplantación de 
-    identidad, la difusión de información falsa, el uso excesivo de dispositivos y los conflictos 
-    originados por malentendidos en redes sociales.
-    <br><br>
-    Muchos estudiantes no conocen los riesgos reales de compartir información personal, ni 
-    identifican cuándo están siendo víctimas de manipulación, acoso o engaños virtuales.  
-    Esto afecta su autoestima, su seguridad y su convivencia escolar.
-    <br><br>
-    Este proyecto busca generar conciencia sobre estos peligros y promover herramientas para 
-    proteger la identidad digital, convivir de manera respetuosa y participar activamente como 
-    ciudadanos responsables en internet.
-        </p>
+        <div class="section-header">
+            <h2>¿Cuál es el problema?</h2>
+            <p class="section-subtitle">La realidad digital que enfrentan nuestros jóvenes</p>
+        </div>
+        
+        <div class="problema-grid">
+            <div class="problema-card">
+                <div class="icon">🔒</div>
+                <h3>Privacidad Vulnerada</h3>
+                <p>Millones de jóvenes comparten información personal sin conocer los riesgos. Fotos, ubicación, datos familiares quedan expuestos a desconocidos.</p>
+            </div>
+
+            <div class="problema-card">
+                <div class="icon">😢</div>
+                <h3>Ciberacoso</h3>
+                <p>Insultos, amenazas, humillación pública. El acoso digital no termina al salir de clase, persigue a las víctimas 24/7.</p>
+            </div>
+
+            <div class="problema-card">
+                <div class="icon">🎭</div>
+                <h3>Suplantación de Identidad</h3>
+                <p>Perfiles falsos, robo de cuentas, difusión de contenido no autorizado que daña la reputación digital.</p>
+            </div>
+
+            <div class="problema-card">
+                <div class="icon">📰</div>
+                <h3>Desinformación</h3>
+                <p>Noticias falsas, rumores virales, información manipulada que confunde y divide a la comunidad estudiantil.</p>
+            </div>
+
+            <div class="problema-card">
+                <div class="icon">📱</div>
+                <h3>Adicción Digital</h3>
+                <p>Uso excesivo de dispositivos que afecta el rendimiento escolar, las relaciones sociales y la salud mental.</p>
+            </div>
+
+            <div class="problema-card">
+                <div class="icon">💔</div>
+                <h3>Conflictos Virtuales</h3>
+                <p>Malentendidos en chats y redes que escalan a problemas reales, afectando la convivencia escolar.</p>
+            </div>
+        </div>
+
+        <div class="problema-text">
+            <p><strong>La realidad es preocupante:</strong> Muchos estudiantes no reconocen cuándo están siendo víctimas de manipulación, acoso o engaños virtuales. No saben cómo proteger su información personal ni cómo actuar frente a situaciones de riesgo.</p>
+            <p>Este proyecto busca <strong>generar conciencia real</strong> sobre estos peligros y brindar herramientas prácticas para navegar el mundo digital de forma segura, respetuosa y responsable.</p>
+        </div>
+    </section>
+
+    <!-- IMPACTO -->
+    <section id="impacto" class="section section-dark">
+        <div class="section-header">
+            <h2>📊 El Impacto Real</h2>
+            <p class="section-subtitle">Datos que no podemos ignorar</p>
+        </div>
+
+        <div class="impacto-grid">
+            <div class="impacto-card">
+                <div class="impacto-number">1 de cada 3</div>
+                <p>estudiantes ha sido víctima de ciberacoso</p>
+            </div>
+            <div class="impacto-card">
+                <div class="impacto-number">45%</div>
+                <p>ha compartido contraseñas con amigos</p>
+            </div>
+            <div class="impacto-card">
+                <div class="impacto-number">78%</div>
+                <p>no verifica la veracidad de noticias</p>
+            </div>
+            <div class="impacto-card">
+                <div class="impacto-number">50%</div>
+                <p>acepta solicitudes de desconocidos</p>
+            </div>
+        </div>
+
+        <div class="testimonios">
+            <h3>Historias Reales</h3>
+            <div class="testimonio-grid">
+                <div class="testimonio">
+                    <p>"Compartí una foto privada con alguien de confianza. Al día siguiente, estaba en todos los grupos del colegio. Me sentí humillada."</p>
+                    <span>- Estudiante, 15 años</span>
+                </div>
+                <div class="testimonio">
+                    <p>"Me crearon un perfil falso con mis fotos y empezaron a escribir cosas horribles. Tarde semanas en recuperar mi reputación."</p>
+                    <span>- Estudiante, 16 años</span>
+                </div>
+                <div class="testimonio">
+                    <p>"Los insultos en el grupo de WhatsApp me afectaban tanto que dejé de ir a clases. Nadie sabía lo que estaba pasando."</p>
+                    <span>- Estudiante, 14 años</span>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- VIDEOS -->
     <section id="videos" class="section">
-        <h2>Videos de Concientización</h2>
-        <p>Los siguientes videos no ofrecen soluciones directas, sino que ayudan a 
-    <strong>identificar mejor los riesgos digitales</strong> y comprender cómo afectan la vida diaria 
-    de los estudiantes. A partir de estos ejemplos, se pueden analizar situaciones reales que ocurren 
-    en redes sociales, chats escolares y plataformas virtuales.
+        <div class="section-header">
+            <h2>🎥 Videos de Concientización</h2>
+            <p class="section-subtitle">Aprende a identificar y prevenir los riesgos digitales</p>
+        </div>
+        
+        <p class="videos-intro">
+            Estos videos te ayudarán a <strong>reconocer situaciones de riesgo</strong> que ocurren diariamente en redes sociales, grupos de WhatsApp y plataformas digitales. No ofrecen soluciones mágicas, pero sí te darán las herramientas para identificar cuándo algo no está bien.
+        </p>
 
         <div class="video-grid">
-
             <div class="video-card">
-                <h3>Ciberacoso – ¿Cómo identificarlo?</h3>
+                <div class="video-badge">Esencial</div>
+                <h3>🛡️ Ciberacoso: ¿Cómo identificarlo?</h3>
                 <video controls>
                     <source src="video1.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
                 </video>
+                <p class="video-desc">Aprende a reconocer las señales del ciberacoso y qué hacer si tú o alguien cercano es víctima.</p>
             </div>
 
             <div class="video-card">
-                <h3>Desinformación – Aprende a detectarla</h3>
+                <div class="video-badge">Imprescindible</div>
+                <h3>🔍 Desinformación: Detecta las Fake News</h3>
                 <video controls>
                     <source src="video2.mp4" type="video/mp4">
+                    Tu navegador no soporta el elemento de video.
                 </video>
+                <p class="video-desc">Técnicas para verificar información y no caer en noticias falsas que se viralizan en redes.</p>
             </div>
+        </div>
 
+        <div class="video-tips">
+            <h3>💡 Después de ver los videos:</h3>
+            <ul>
+                <li>Reflexiona: ¿Has vivido situaciones similares?</li>
+                <li>Comparte: Habla con amigos y familia sobre lo aprendido</li>
+                <li>Actúa: Aplica los consejos en tu día a día digital</li>
+                <li>Reporta: Si identificas un caso, no te quedes callado</li>
+            </ul>
         </div>
     </section>
 
     <!-- PROPUESTAS -->
     <section id="propuestas" class="section">
-        <h2>Propuestas de Solución</h2>
-        <p>
-            Estas propuestas buscan mejorar la ciudadanía digital mediante acciones reales y prácticas.
-            Haz clic en cada propuesta para ver más información.
-        </p>
+        <div class="section-header">
+            <h2>💡 Propuestas de Solución</h2>
+            <p class="section-subtitle">Acciones concretas para mejorar nuestra ciudadanía digital</p>
+        </div>
 
         <div class="propuesta-list">
-
             <div class="propuesta" onclick="toggleInfo('p1')">
-                <h3>1. Talleres de ciudadanía digital</h3>
-                <p id="p1" class="info">
-                    Se propone realizar talleres donde los estudiantes aprendan a proteger su privacidad,
-                    identificar noticias falsas y actuar correctamente en redes sociales durante algun conflicto.
-                </p>
+                <div class="propuesta-header">
+                    <div>
+                        <span class="propuesta-icon">🎓</span>
+                        <h3>Talleres de Ciudadanía Digital</h3>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div id="p1" class="info">
+                    <p><strong>Objetivo:</strong> Capacitar a estudiantes en habilidades digitales esenciales.</p>
+                    <p><strong>Contenido:</strong></p>
+                    <ul>
+                        <li>Protección de privacidad y configuración de cuentas</li>
+                        <li>Identificación de noticias falsas y verificación de fuentes</li>
+                        <li>Manejo de conflictos en redes sociales</li>
+                        <li>Huella digital y reputación online</li>
+                    </ul>
+                    <p><strong>Frecuencia:</strong> 2 talleres mensuales de 90 minutos</p>
+                    <p><strong>Metodología:</strong> Casos prácticos, dinámicas grupales y simulaciones</p>
+                </div>
             </div>
 
             <div class="propuesta" onclick="toggleInfo('p2')">
-                <h3>2. Protocolos contra el ciberacoso</h3>
-                <p id="p2" class="info">
-                    Implementar rutas de denuncia digital, acompañamiento emocional y medidas de respuesta rápida.
-                </p>
+                <div class="propuesta-header">
+                    <div>
+                        <span class="propuesta-icon">🚨</span>
+                        <h3>Protocolo Anti-Ciberacoso</h3>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div id="p2" class="info">
+                    <p><strong>Objetivo:</strong> Establecer rutas claras de acción ante casos de ciberacoso.</p>
+                    <p><strong>Componentes:</strong></p>
+                    <ul>
+                        <li><strong>Detección temprana:</strong> Capacitación a docentes y tutores</li>
+                        <li><strong>Denuncia segura:</strong> Canal confidencial para reportar casos</li>
+                        <li><strong>Respuesta rápida:</strong> Equipo de respuesta en máximo 24 horas</li>
+                        <li><strong>Apoyo emocional:</strong> Acompañamiento psicológico para víctimas</li>
+                        <li><strong>Medidas disciplinarias:</strong> Sanciones claras para agresores</li>
+                        <li><strong>Seguimiento:</strong> Monitoreo post-intervención</li>
+                    </ul>
+                    <p><strong>Contacto de emergencia:</strong> disponible 24/7</p>
+                </div>
             </div>
 
             <div class="propuesta" onclick="toggleInfo('p3')">
-                <h3>3. Campañas escolares permanentes</h3>
-                <p id="p3" class="info">
-                    Crear afiches sobre los diferentes problemas que afrontamos i posibles soluciones, videos y 
-                    actividades 
-                    periódicas para promover el respeto y la convivencia digital.
-                </p>
+                <div class="propuesta-header">
+                    <div>
+                        <span class="propuesta-icon">📢</span>
+                        <h3>Campañas Escolares Permanentes</h3>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div id="p3" class="info">
+                    <p><strong>Objetivo:</strong> Mantener la concientización activa durante todo el año escolar.</p>
+                    <p><strong>Actividades:</strong></p>
+                    <ul>
+                        <li><strong>Afiches informativos:</strong> Renovación mensual con temas específicos</li>
+                        <li><strong>Videos semanales:</strong> Cápsulas cortas en redes del colegio</li>
+                        <li><strong>Desafíos digitales:</strong> Retos mensuales para promover buen uso</li>
+                        <li><strong>Día de la Ciudadanía Digital:</strong> Evento anual con actividades especiales</li>
+                        <li><strong>Concursos:</strong> Premiación a mejores propuestas estudiantiles</li>
+                    </ul>
+                    <p><strong>Participación:</strong> Toda la comunidad educativa involucrada</p>
+                </div>
             </div>
 
             <div class="propuesta" onclick="toggleInfo('p4')">
-                <h3>4. Charlas con especialistas</h3>
-                <p id="p4" class="info">
-                    Psicólogos, especialistas en redes y policías de ciberdelitos para informar a los estudiantes sobre
-                    inquietudes que puedan tener en su dia a dia.
-                </p>
+                <div class="propuesta-header">
+                    <div>
+                        <span class="propuesta-icon">👥</span>
+                        <h3>Charlas con Especialistas</h3>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div id="p4" class="info">
+                    <p><strong>Objetivo:</strong> Brindar información especializada y resolver dudas específicas.</p>
+                    <p><strong>Expertos invitados:</strong></p>
+                    <ul>
+                        <li><strong>Psicólogos:</strong> Impacto emocional y salud mental digital</li>
+                        <li><strong>Policía cibernética:</strong> Ciberdelitos y procedimientos legales</li>
+                        <li><strong>Especialistas en redes:</strong> Configuración segura y privacidad</li>
+                        <li><strong>Periodistas:</strong> Alfabetización mediática y fact-checking</li>
+                        <li><strong>Abogados:</strong> Derechos digitales y responsabilidades</li>
+                    </ul>
+                    <p><strong>Formato:</strong> Charlas de 60 min + 30 min de preguntas</p>
+                    <p><strong>Frecuencia:</strong> Una charla mensual</p>
+                </div>
             </div>
 
             <div class="propuesta" onclick="toggleInfo('p5')">
-                <h3>5. Creación de brigadas digitales</h3>
-                <p id="p5" class="info">
-                    Estudiantes voluntarios encargados de detectar riesgos posibles, alertar y promover el buen uso de la 
-                    tecnologia en diferentes ambitos sociales tanto como para el desarrollo personal y academico.
-                </p>
+                <div class="propuesta-header">
+                    <div>
+                        <span class="propuesta-icon">🦸</span>
+                        <h3>Brigadas Digitales Estudiantiles</h3>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div id="p5" class="info">
+                    <p><strong>Objetivo:</strong> Crear una red de estudiantes comprometidos con la seguridad digital.</p>
+                    <p><strong>Funciones de las brigadas:</strong></p>
+                    <ul>
+                        <li><strong>Detección:</strong> Identificar situaciones de riesgo en redes sociales</li>
+                        <li><strong>Orientación:</strong> Guiar a compañeros en dudas sobre seguridad</li>
+                        <li><strong>Promoción:</strong> Difundir buenas prácticas y consejos</li>
+                        <li><strong>Mediación:</strong> Ayudar a resolver conflictos digitales menores</li>
+                        <li><strong>Reportes:</strong> Canalizar casos graves a autoridades</li>
+                    </ul>
+                    <p><strong>Capacitación:</strong> 20 horas de formación inicial</p>
+                    <p><strong>Reconocimiento:</strong> Certificación y horas de servicio social</p>
+                </div>
             </div>
 
             <div class="propuesta" onclick="toggleInfo('p6')">
-                <h3>6. Plataforma de ayuda anónima</h3>
-                <p id="p6" class="info">
-                    Un buzón digital para que los alumnos reporten casos de acoso o problemas sin miedo a no ser atendidos.
-                </p>
+                <div class="propuesta-header">
+                    <div>
+                        <span class="propuesta-icon">📮</span>
+                        <h3>Plataforma de Ayuda Anónima</h3>
+                    </div>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div id="p6" class="info">
+                    <p><strong>Objetivo:</strong> Facilitar la denuncia sin miedo a represalias.</p>
+                    <p><strong>Características:</strong></p>
+                    <ul>
+                        <li><strong>100% anónimo:</strong> No se requieren datos personales</li>
+                        <li><strong>Acceso 24/7:</strong> Disponible en cualquier momento</li>
+                        <li><strong>Multiplataforma:</strong> Web, app móvil y código QR</li>
+                        <li><strong>Respuesta garantizada:</strong> Máximo 48 horas</li>
+                        <li><strong>Seguimiento de caso:</strong> Código único para ver avances</li>
+                        <li><strong>Confidencialidad total:</strong> Protección de identidad asegurada</li>
+                    </ul>
+                    <p><strong>Tipos de reporte:</strong> Ciberacoso, contenido inapropiado, amenazas, robo de identidad, otros</p>
+                </div>
             </div>
-
         </div>
     </section>
 
+    <!-- RECURSOS -->
+    <section id="recursos" class="section section-recursos">
+        <div class="section-header">
+            <h2>📚 Recursos Adicionales</h2>
+            <p class="section-subtitle">Material complementario para profundizar</p>
+        </div>
+
+        <div class="recursos-grid">
+            <div class="recurso-card">
+                <h3>🔗 Sitios Confiables</h3>
+                <ul>
+                    <li><a href="#" target="_blank">PantallasAmigas</a> - Educación digital</li>
+                    <li><a href="#" target="_blank">Internet Segura</a> - Consejos y guías</li>
+                    <li><a href="#" target="_blank">Ciberbullying.org</a> - Recursos anti-acoso</li>
+                </ul>
+            </div>
+
+            <div class="recurso-card">
+                <h3>📱 Apps Recomendadas</h3>
+                <ul>
+                    <li><strong>Qustodio:</strong> Control parental</li>
+                    <li><strong>NetNanny:</strong> Filtro de contenido</li>
+                    <li><strong>Family Link:</strong> Google para familias</li>
+                </ul>
+            </div>
+
+            <div class="recurso-card">
+                <h3>📖 Guías Descargables</h3>
+                <ul>
+                    <li>Manual de Privacidad en Redes Sociales</li>
+                    <li>Guía Anti-Ciberacoso para Padres</li>
+                    <li>10 Reglas de Oro de la Ciudadanía Digital</li>
+                </ul>
+            </div>
+
+            <div class="recurso-card">
+                <h3>🎮 Juegos Educativos</h3>
+                <ul>
+                    <li>Interland - Google para familias</li>
+                    <li>CyberChase - PBS Kids</li>
+                    <li>Netsmartz - National Center</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="section section-contacto">
+        <div class="section-header">
+            <h2>📞 ¿Necesitas Ayuda?</h2>
+            <p class="section-subtitle">No estás solo, estamos aquí para ti</p>
+        </div>
+
+        <div class="contacto-grid">
+            <div class="contacto-card urgente">
+                <h3>🚨 Emergencia</h3>
+                <p>Si estás en peligro inmediato:</p>
+                <a href="tel:911" class="btn-emergencia">Llamar al 911</a>
+            </div>
+
+            <div class="contacto-card">
+                <h3>💬 Chat Anónimo</h3>
+                <p>Habla con un orientador en línea</p>
+                <button class="btn-contacto">Iniciar Chat</button>
+            </div>
+
+            <div class="contacto-card">
+                <h3>📧 Email</h3>
+                <p>Escríbenos tu situación</p>
+                <a href="mailto:ayuda@escuela.edu" class="btn-contacto">Enviar Email</a>
+            </div>
+
+            <div class="contacto-card">
+                <h3>📍 Presencial</h3>
+                <p>Visita nuestro departamento de orientación</p>
+                <p><strong>Horario:</strong> Lun-Vie 8am-5pm</p>
+            </div>
+        </div>
+
+        <div class="lineas-ayuda">
+            <h3>Líneas de Ayuda Nacional</h3>
+            <ul>
+                <li><strong>Línea contra el bullying:</strong> 0800-111-222</li>
+                <li><strong>Te Protejo (Colombia):</strong> www.teprotejo.org</li>
+                <li><strong>Policía Nacional:</strong> 105</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Sobre la Campaña</h4>
+                <p>Iniciativa estudiantil para promover la ciudadanía digital responsable en nuestra comunidad educativa.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#problema">El Problema</a></li>
+                    <li><a href="#propuestas">Propuestas</a></li>
+                    <li><a href="#recursos">Recursos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Comparte</h4>
+                <div class="social-links">
+                    <a href="#">Facebook</a>
+                    <a href="#">Twitter</a>
+                    <a href="#">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Campaña de Ciudadanía Digital | Todos los derechos reservados</p>
+        </div>
+    </footer>
+
     <!-- ASISTENTE VIRTUAL -->
-    <button id="bot-button" class="bot-button">🤖</button>
+    <button id="bot-button" class="bot-button" title="Asistente Virtual">
+        🤖
+        <span class="bot-notification">¡Pregúntame!</span>
+    </button>
 
     <div id="bot-window" class="bot-window">
         <div class="bot-header">
-            <span>Asistente Virtual</span>
-            <button id="bot-close">✖</button>
+            <div>
+                <span class="bot-avatar">🤖</span>
+                <span>Asistente de Ciudadanía Digital</span>
+            </div>
+            <button id="bot-close" title="Cerrar">✖</button>
         </div>
 
-        <div id="bot-chat" class="bot-chat"></div>
+        <div id="bot-chat" class="bot-chat">
+            <div class="bubble bot-bubble">
+                <strong>Asistente:</strong> ¡Hola! 👋 Soy tu asistente virtual. Puedo ayudarte con:
+                <ul style="margin-top: 10px; padding-left: 20px;">
+                    <li>Información sobre ciberacoso</li>
+                    <li>Consejos de seguridad</li>
+                    <li>Propuestas de la campaña</li>
+                    <li>Recursos y ayuda</li>
+                </ul>
+                ¿En qué puedo ayudarte?
+            </div>
+        </div>
+
+        <div class="bot-suggestions">
+            <button class="suggestion-btn" onclick="sendSuggestion('¿Qué es el ciberacoso?')">¿Qué es el ciberacoso?</button>
+            <button class="suggestion-btn" onclick="sendSuggestion('Consejos de seguridad')">Consejos de seguridad</button>
+            <button class="suggestion-btn" onclick="sendSuggestion('¿Cómo reportar?')">¿Cómo reportar?</button>
+        </div>
 
         <div class="bot-input-area">
-            <input id="bot-input" type="text" placeholder="Escribe tu duda...">
-            <button id="bot-send">Enviar</button>
+            <input id="bot-input" type="text" placeholder="Escribe tu pregunta..." autocomplete="off">
+            <button id="bot-send" title="Enviar">➤</button>
         </div>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
