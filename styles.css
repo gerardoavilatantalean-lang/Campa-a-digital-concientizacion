@@ -1,161 +1,113 @@
-/* =============================
-   ESTILOS GENERALES
-============================= */
+/* Estilo general */
 body {
+    font-family: Arial, sans-serif;
+    background: #f5f6ff;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #f0f4f8;
-    color: #222;
+    color: #1a1a1a;
+    line-height: 1.6;
 }
 
-h1, h2, h3 {
-    font-weight: 700;
-    color: #0f1d2d;
-}
-
-section {
-    padding: 50px 20px;
-    max-width: 1000px;
-    margin: auto;
-}
-
-/* =============================
-   HEADER + NAV
-============================= */
+/* Header */
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #0f1d2d;
-    padding: 18px 0;
-    transition: 0.3s;
-    z-index: 999;
-}
-
-header.scrolled {
-    background: #151d26;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-nav {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-}
-
-nav a {
+    background: linear-gradient(135deg, #0044cc, #007bff);
     color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #71b8ff;
-}
-
-/* =============================
-   HERO / INICIO
-============================= */
-.hero {
-    margin-top: 80px;
     text-align: center;
-    padding: 80px 20px;
-    background: linear-gradient(to bottom right, #0a1a2a, #123456);
-    color: white;
+    padding: 50px 20px;
+    animation: fade 1.5s ease-in;
 }
 
-.hero h1 {
-    font-size: 35px;
-}
-
-.hero button {
-    margin-top: 20px;
-    padding: 12px 20px;
-    background: #007bff;
-    border: none;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
+.subtitulo {
+    margin-top: -10px;
     font-size: 18px;
+    opacity: 0.9;
+}
+
+.boton-explorar {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: white;
+    color: #003399;
+    font-weight: bold;
+    border-radius: 10px;
+    text-decoration: none;
+    transition: .3s;
+}
+
+.boton-explorar:hover {
+    background: #ffd000;
+    transform: scale(1.08);
+}
+
+/* Tarjetas */
+.card {
+    width: 90%;
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
     transition: 0.3s;
 }
 
-.hero button:hover {
-    background: #005fcc;
-}
-
-/* =============================
-   TARJETAS DE ACCIONES
-============================= */
-.acciones {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-}
-
-@media (min-width: 700px) {
-    .acciones {
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-.accion-card {
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: 0.4s;
-}
-
-.accion-card:hover {
+.card:hover {
     transform: translateY(-5px);
 }
 
-/* =============================
-   VIDEOS EMBEBIDOS
-============================= */
-.video-box {
-    margin-top: 15px;
-    width: 100%;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-}
-
-/* =============================
-   POST DE DIFUSIÓN
-============================= */
-.post-box {
-    background: #fff;
-    padding: 25px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    font-size: 18px;
-}
-
-/* =============================
-   FOOTER
-============================= */
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #0f1d2d;
-    color: white;
-    margin-top: 40px;
-}
-
-/* =================================================
-   EFECTOS Y ANIMACIONES (INTEGRADOS AL JS PRO)
-================================================= */
-article, .accion-card {
+/* Animación de aparición */
+.fade-in {
     opacity: 0;
-    transform: translateY(20px);
-    transition: 0.6s ease-out;
+    animation: aparecer 1.3s forwards;
 }
 
-.show {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
+@keyframes aparecer {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Grid de videos */
+.videos-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* Acciones */
+.acciones-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.accion {
+    padding: 20px;
+    background: #eef2ff;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: .3s;
+}
+
+.accion:hover {
+    background: #dce4ff;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    margin-top: 40px;
+    text-align: center;
+    background: #003399;
+    color: white;
+    padding: 15px 0;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .videos-grid,
+    .acciones-grid {
+        grid-template-columns: 1fr;
+    }
 }
