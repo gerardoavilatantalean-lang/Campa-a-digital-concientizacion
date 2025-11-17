@@ -3,104 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Digitaliza Tu Identidad</title>
+    <title>Campaña Digital de Concientización</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-    <!-- ENCABEZADO -->
     <header>
-        <h1>🛑 NO SEAS UN EXTRAÑO EN TU PROPIA HISTORIA 🛑</h1>
-        <p class="subtitulo">Campaña: <strong>Digitaliza tu Identidad</strong></p>
-        <a href="#acciones" class="boton-explorar">EXPLORA NUESTRAS ACCIONES CLAVE</a>
+        <h1>Campaña Digital de Concientización</h1>
+        <p>Ciudadanía activa, respeto y convivencia digital</p>
     </header>
 
-    <!-- SITUACIÓN SIGNIFICATIVA -->
-    <section class="card fade-in" id="situacion">
-        <h2>📌 Situación Significativa</h2>
+    <nav>
+        <a href="#problema">Problema</a>
+        <a href="#videos">Videos</a>
+        <a href="#propuestas">Propuestas</a>
+    </nav>
 
+    <!-- PROBLEMA -->
+    <section id="problema" class="section">
+        <h2>¿Cuál es el problema?</h2>
         <p>
-            En nuestra institución educativa Fe y Alegría 36 se ha identificado que muchos estudiantes presentan 
-            <strong>dificultades para comprender textos, analizar información y resolver problemas</strong>, lo que limita su 
-            capacidad para interpretar la realidad de su entorno y participar activamente en el desarrollo de su comunidad.
+            En el entorno digital actual, muchos estudiantes experimentan problemas como el 
+            ciberacoso, la desinformación, el mal uso de redes sociales, la vulneración de la privacidad 
+            y conflictos en la convivencia virtual.  
+            <br><br>
+            Esta campaña busca generar conciencia, prevenir estos problemas y fomentar una ciudadanía 
+            digital responsable y activa.
         </p>
-
-        <p>
-            También se observa que no siempre reconocen la importancia de su 
-            <strong>historia local, identidad regional y gestión responsable de los recursos económicos</strong>.
-        </p>
-
-        <p>
-            Por ello, se plantea una experiencia de aprendizaje que vincula competencias ciudadanas, comunicativas y digitales, 
-            donde los estudiantes comprenden, analicen y comuniquen información relevante sobre su comunidad y propongan 
-            <strong>acciones concretas que promuevan el bienestar común, la convivencia democrática y el desarrollo sostenible</strong>.
-        </p>
-
-        <h3>❓ Preguntas retadoras</h3>
-        <ul>
-            <li>¿Cómo conocer nuestra historia nos ayuda a comprender quiénes somos y hacia dónde vamos?</li>
-            <li>¿De qué manera los recursos naturales, económicos y culturales pueden usarse responsablemente?</li>
-            <li>¿Qué acciones pueden proponer los estudiantes para fortalecer la identidad y convivencia democrática?</li>
-        </ul>
     </section>
 
-    <!-- VIDEOS SOBRE PROBLEMAS DIGITALES -->
-    <section class="card fade-in" id="videos">
-        <h2>🎥 Videos para Comprender Mejor los Problemas Digitales</h2>
-        <p>
-            Estos videos permiten entender los principales problemas de la identidad digital, la convivencia en línea 
-            y los riesgos del entorno digital. No muestran soluciones, sino que ayudan a reconocer los desafíos.
-        </p>
+    <!-- VIDEOS -->
+    <section id="videos" class="section">
+        <h2>Videos de Concientización</h2>
+        <p>Estos videos te ayudarán a identificar de mejor manera los problemas digitales y sociales.</p>
 
-        <div class="videos-grid">
-            <iframe width="100%" height="250" 
-                src="https://www.youtube.com/embed/UQgtq3ZPT5o"
-                title="Video 1" frameborder="0" allowfullscreen></iframe>
+        <div class="video-grid">
 
-            <iframe width="100%" height="250" 
-                src="https://www.youtube.com/embed/1lpQmgzFQiQ"
-                title="Video 2" frameborder="0" allowfullscreen></iframe>
+            <div class="video-card">
+                <h3>Ciberacoso – ¿Cómo identificarlo?</h3>
+                <video controls>
+                    <source src="video1.mp4" type="video/mp4">
+                </video>
+            </div>
+
+            <div class="video-card">
+                <h3>Desinformación – Aprende a detectarla</h3>
+                <video controls>
+                    <source src="video2.mp4" type="video/mp4">
+                </video>
+            </div>
+
         </div>
     </section>
 
-    <!-- ACCIONES CIUDADANAS -->
-    <section class="card fade-in" id="acciones">
-        <h2>🚀 Acciones Ciudadanas Propuestas</h2>
+    <!-- PROPUESTAS -->
+    <section id="propuestas" class="section">
+        <h2>Propuestas de Solución</h2>
+        <p>
+            Estas propuestas buscan mejorar la ciudadanía digital mediante acciones reales y prácticas.
+            Haz clic en cada propuesta para ver más información.
+        </p>
 
-        <div class="acciones-grid">
-            <div class="accion">
-                <h3>🗺️ Mapa Interactivo de Identidad</h3>
-                <p>Un recurso para ubicar los elementos culturales, históricos y comunitarios de nuestra zona.</p>
+        <div class="propuesta-list">
+
+            <div class="propuesta" onclick="toggleInfo('p1')">
+                <h3>1. Talleres de ciudadanía digital</h3>
+                <p id="p1" class="info">
+                    Se propone realizar talleres donde los estudiantes aprendan a proteger su privacidad,
+                    identificar noticias falsas y actuar correctamente en redes.
+                </p>
             </div>
 
-            <div class="accion">
-                <h3>🤝 Pacto del Netiquette</h3>
-                <p>Normas creadas por los estudiantes para promover respeto digital y convivencia democrática.</p>
+            <div class="propuesta" onclick="toggleInfo('p2')">
+                <h3>2. Protocolos contra el ciberacoso</h3>
+                <p id="p2" class="info">
+                    Implementar rutas de denuncia digital, acompañamiento emocional y medidas de respuesta rápida.
+                </p>
             </div>
 
-            <div class="accion">
-                <h3>📹 Reels de Denuncia Sostenible</h3>
-                <p>Videos cortos para visibilizar y denunciar el daño ambiental o cultural en nuestra comunidad.</p>
+            <div class="propuesta" onclick="toggleInfo('p3')">
+                <h3>3. Campañas escolares permanentes</h3>
+                <p id="p3" class="info">
+                    Crear afiches, videos y actividades periódicas para promover el respeto y la convivencia digital.
+                </p>
             </div>
+
+            <div class="propuesta" onclick="toggleInfo('p4')">
+                <h3>4. Charlas con especialistas</h3>
+                <p id="p4" class="info">
+                    Psicólogos, especialistas en redes y policías de ciberdelitos para informar a los estudiantes.
+                </p>
+            </div>
+
+            <div class="propuesta" onclick="toggleInfo('p5')">
+                <h3>5. Creación de brigadas digitales</h3>
+                <p id="p5" class="info">
+                    Estudiantes voluntarios encargados de detectar riesgos, alertar y promover el buen uso de la tecnología.
+                </p>
+            </div>
+
+            <div class="propuesta" onclick="toggleInfo('p6')">
+                <h3>6. Plataforma de ayuda anónima</h3>
+                <p id="p6" class="info">
+                    Un buzón digital para que los alumnos reporten casos de acoso o problemas sin miedo.
+                </p>
+            </div>
+
         </div>
     </section>
 
-    <!-- CONCLUSIÓN -->
-    <section class="card fade-in" id="conclusion">
-        <h2>📘 Conclusión</h2>
-        <p>
-            La ciudadanía digital es una responsabilidad compartida. Conocer nuestra historia, proteger nuestra identidad digital 
-            y actuar con respeto en línea permite construir una comunidad democrática, sostenible y consciente.
-        </p>
-        <p><strong>La tecnología es una herramienta poderosa… si la usamos con identidad y responsabilidad.</strong></p>
-    </section>
+    <!-- ASISTENTE VIRTUAL -->
+    <button id="bot-button" class="bot-button">🤖</button>
 
-    <!-- FOOTER -->
-    <footer>
-        <p>© 2025 - Campaña “Digitaliza Tu Identidad”</p>
-    </footer>
+    <div id="bot-window" class="bot-window">
+        <div class="bot-header">
+            <span>Asistente Virtual</span>
+            <button id="bot-close">✖</button>
+        </div>
 
+        <div id="bot-chat" class="bot-chat"></div>
+
+        <div class="bot-input-area">
+            <input id="bot-input" type="text" placeholder="Escribe tu duda...">
+            <button id="bot-send">Enviar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
-
