@@ -1,90 +1,64 @@
-/* ============================
-   SMOOTH SCROLL DEL MENÚ
-============================ */
-document.querySelectorAll("nav a[href^='#']").forEach(link => {
-    link.addEventListener("click", e => {
-        e.preventDefault();
-        const target = document.querySelector(link.getAttribute("href"));
-        target.scrollIntoView({ behavior: "smooth" });
-    });
+// =====================
+// DESPLEGAR PROPUESTAS
+// =====================
+
+function toggleInfo(id) {
+    const box = document.getElementById(id);
+    box.style.display = box.style.display === "block" ? "none" : "block";
+}
+
+// =====================
+// ASISTENTE VIRTUAL
+// =====================
+
+const botButton = document.getElementById("bot-button");
+const botWindow = document.getElementById("bot-window");
+const botClose = document.getElementById("bot-close");
+const botSend = document.getElementById("bot-send");
+const botInput = document.getElementById("bot-input");
+const botChat = document.getElementById("bot-chat");
+
+botButton.addEventListener("click", () => {
+    botWindow.style.display = "block";
 });
 
-/* ============================
-   EFECTO HEADER AL HACER SCROLL
-============================ */
-const header = document.querySelector("header");
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-        header.classList.add("scrolled");
-    } else {
-        header.classList.remove("scrolled");
-    }
+botClose.addEventListener("click", () => {
+    botWindow.style.display = "none";
 });
 
-/* ============================
-   ANIMACIONES AL APARECER (SCROLL REVEAL)
-============================ */
-const items = document.querySelectorAll("article, .accion-card");
-
-const showOnScroll = () => {
-    const triggerBottom = window.innerHeight * 0.85;
-
-    items.forEach(item => {
-        const itemTop = item.getBoundingClientRect().top;
-
-        if (itemTop < triggerBottom) {
-            item.classList.add("show");
-        }
-    });
-};
-
-window.addEventListener("scroll", showOnScroll);
-showOnScroll(); // Para cargar animaciones si ya están en pantalla
-
-/* ============================
-   BOTÓN "VOLVER ARRIBA"
-============================ */
-const btnTop = document.createElement("button");
-btnTop.textContent = "↑";
-btnTop.id = "btnTop";
-document.body.appendChild(btnTop);
-
-btnTop.style.position = "fixed";
-btnTop.style.bottom = "25px";
-btnTop.style.right = "25px";
-btnTop.style.padding = "10px 15px";
-btnTop.style.fontSize = "20px";
-btnTop.style.borderRadius = "8px";
-btnTop.style.border = "none";
-btnTop.style.cursor = "pointer";
-btnTop.style.display = "none";
-btnTop.style.background = "#007bff";
-btnTop.style.color = "white";
-btnTop.style.boxShadow = "0 3px 8px rgba(0,0,0,0.3)";
-btnTop.style.zIndex = "999";
-btnTop.style.transition = "0.3s";
-
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 350) {
-        btnTop.style.display = "block";
-    } else {
-        btnTop.style.display = "none";
-    }
+botSend.addEventListener("click", sendMessage);
+botInput.addEventListener("keypress", (e) => {
+    if (e.key === "Enter") sendMessage();
 });
 
-btnTop.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-});
+function sendMessage() {
+    let text = botInput.value.trim();
+    if (text === "") return;
 
-/* ============================
-   EFECTO EN BOTONES (SUAVE)
-============================ */
-document.querySelectorAll("button").forEach(btn => {
-    btn.addEventListener("mousedown", () => {
-        btn.style.transform = "scale(0.95)";
-    });
-    btn.addEventListener("mouseup", () => {
-        btn.style.transform = "scale(1)";
-    });
-});
+    addMessage("Tú", text);
+    botInput.value = "";
+
+    setTimeout(() => {
+        addMessage("Asistente", generateResponse(text));
+    }, 500);
+}
+
+function addMessage(sender, message) {
+    let bubble = document.createElement("div");
+    bubble.classList.add("bubble");
+    bubble.innerHTML = `<strong>${sender}:</strong> ${message}`;
+    botChat.appendChild(bubble);
+    botChat.scrollTop = botChat.scrollHeight;
+}
+
+function generateResponse(msg) {
+    msg = msg.toLowerCase();
+
+    if (msg.includes("hola")) return "¡Hola! ¿En qué puedo ayudarte con respecto a tus dudas sobre la campaña campaña?";
+    if (msg.includes("problema")) return "El problema principal es el mal uso de la tecnología, ciberacoso y desinformación.";
+    if (msg.includes("propuestas")) return "Tenemos opcciones variadas frente a esos problemas , brigadas digitales, buzón anónimo, charlas informativas,anucios llenos de informacion y más.";
+    if (msg.includes("video")) return "Los videos te ayudan a identificar el ciberacoso y la desinformación de una mejor manera.";
+
+    return "No entendí bien, pero puedo ayudarte con dudas del problema, propuestas o videos.";
+}
+
