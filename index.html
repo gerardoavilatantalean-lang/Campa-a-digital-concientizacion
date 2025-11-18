@@ -375,46 +375,202 @@
         </div>
     </section>
 
-    <!-- CONTACTO -->
-    <section id="contacto" class="section section-contacto">
+    <!-- ZONA INTERACTIVA -->
+    <section id="contacto" class="section section-interactiva">
         <div class="section-header">
-            <h2>📞 ¿Necesitas Ayuda?</h2>
-            <p class="section-subtitle">No estás solo, estamos aquí para ti</p>
+            <h2>🎮 ZONA INTERACTIVA</h2>
+            <p class="section-subtitle">Aprende jugando y crea contenido viral</p>
         </div>
 
-        <div class="contacto-grid">
-            <div class="contacto-card urgente">
-                <h3>🚨 Emergencia</h3>
-                <p>Si estás en peligro inmediato:</p>
-                <a href="tel:911" class="btn-emergencia">Llamar al 911</a>
+        <!-- Control de Música -->
+        <div class="music-control">
+            <button id="music-toggle" class="music-btn">
+                <span id="music-icon">🔇</span>
+                <span id="music-text">Activar Música</span>
+            </button>
+        </div>
+
+        <!-- Pestañas -->
+        <div class="tabs-container">
+            <button class="tab-btn active" onclick="switchTab('quiz')">
+                🏆 Quiz Digital
+            </button>
+            <button class="tab-btn" onclick="switchTab('memes')">
+                🎨 Generador de Memes
+            </button>
+        </div>
+
+        <!-- QUIZ INTERACTIVO -->
+        <div id="quiz-section" class="interactive-content active">
+            <div class="quiz-container">
+                <div class="quiz-header">
+                    <h3>🧠 Desafío: Ciudadanía Digital</h3>
+                    <p>Pon a prueba tus conocimientos sobre seguridad digital</p>
+                    <div class="quiz-stats">
+                        <div class="stat-item">
+                            <span class="stat-icon">📊</span>
+                            <span>Pregunta <span id="current-question">1</span>/10</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-icon">⭐</span>
+                            <span>Puntos: <span id="quiz-score">0</span></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="quiz-content" class="quiz-content">
+                    <div class="question-card">
+                        <h4 id="question-text">Cargando pregunta...</h4>
+                        <div id="answers-container" class="answers-container">
+                            <!-- Las respuestas se cargan dinámicamente -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="quiz-result" class="quiz-result" style="display: none;">
+                    <div class="result-animation">🎉</div>
+                    <h3>¡Quiz Completado!</h3>
+                    <div class="final-score">
+                        <span class="score-number" id="final-score">0</span>
+                        <span class="score-total">/100</span>
+                    </div>
+                    <p id="result-message"></p>
+                    <div class="result-badge" id="result-badge"></div>
+                    <button onclick="restartQuiz()" class="btn-restart">🔄 Intentar de Nuevo</button>
+                    <button onclick="shareResult()" class="btn-share">📤 Compartir Resultado</button>
+                </div>
+
+                <button id="start-quiz-btn" onclick="startQuiz()" class="btn-start-quiz">
+                    🚀 Comenzar Quiz
+                </button>
             </div>
 
-            <div class="contacto-card">
-                <h3>💬 Chat Anónimo</h3>
-                <p>Habla con un orientador en línea</p>
-                <button class="btn-contacto">Iniciar Chat</button>
-            </div>
-
-            <div class="contacto-card">
-                <h3>📧 Email</h3>
-                <p>Escríbenos tu situación</p>
-                <a href="mailto:ayuda@escuela.edu" class="btn-contacto">Enviar Email</a>
-            </div>
-
-            <div class="contacto-card">
-                <h3>📍 Presencial</h3>
-                <p>Visita nuestro departamento de orientación</p>
-                <p><strong>Horario:</strong> Lun-Vie 8am-5pm</p>
+            <!-- Ranking -->
+            <div class="ranking-section">
+                <h3>🏆 Top 5 Mejores Puntajes</h3>
+                <div id="ranking-list" class="ranking-list">
+                    <div class="ranking-item">
+                        <span class="rank-pos">🥇</span>
+                        <span class="rank-name">Alex Digital</span>
+                        <span class="rank-score">100 pts</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank-pos">🥈</span>
+                        <span class="rank-name">María Tech</span>
+                        <span class="rank-score">90 pts</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank-pos">🥉</span>
+                        <span class="rank-name">Carlos Net</span>
+                        <span class="rank-score">85 pts</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank-pos">4️⃣</span>
+                        <span class="rank-name">Ana Web</span>
+                        <span class="rank-score">80 pts</span>
+                    </div>
+                    <div class="ranking-item">
+                        <span class="rank-pos">5️⃣</span>
+                        <span class="rank-name">Luis Cyber</span>
+                        <span class="rank-score">75 pts</span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="lineas-ayuda">
-            <h3>Líneas de Ayuda Nacional</h3>
-            <ul>
-                <li><strong>Línea contra el bullying:</strong> 0800-111-222</li>
-                <li><strong>Te Protejo (Colombia):</strong> www.teprotejo.org</li>
-                <li><strong>Policía Nacional:</strong> 105</li>
-            </ul>
+        <!-- GENERADOR DE MEMES -->
+        <div id="memes-section" class="interactive-content">
+            <div class="meme-container">
+                <div class="meme-header">
+                    <h3>🎨 Crea tu Meme de Concientización</h3>
+                    <p>Diseña memes educativos y compártelos en redes sociales</p>
+                </div>
+
+                <div class="meme-creator">
+                    <div class="meme-templates">
+                        <h4>Elige una plantilla:</h4>
+                        <div class="templates-grid">
+                            <div class="template-card" onclick="selectTemplate(1)">
+                                <div class="template-preview template-1">
+                                    <div class="template-icon">🔒</div>
+                                    <p>Privacidad</p>
+                                </div>
+                            </div>
+                            <div class="template-card" onclick="selectTemplate(2)">
+                                <div class="template-preview template-2">
+                                    <div class="template-icon">🛡️</div>
+                                    <p>Ciberacoso</p>
+                                </div>
+                            </div>
+                            <div class="template-card" onclick="selectTemplate(3)">
+                                <div class="template-preview template-3">
+                                    <div class="template-icon">🔍</div>
+                                    <p>Fake News</p>
+                                </div>
+                            </div>
+                            <div class="template-card" onclick="selectTemplate(4)">
+                                <div class="template-preview template-4">
+                                    <div class="template-icon">💪</div>
+                                    <p>Seguridad</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="meme-editor">
+                        <div class="meme-canvas" id="meme-canvas">
+                            <div class="meme-bg" id="meme-bg"></div>
+                            <div class="meme-icon" id="meme-icon">🔒</div>
+                            <input type="text" id="meme-text-top" class="meme-text meme-text-top" placeholder="Texto superior..." maxlength="50">
+                            <input type="text" id="meme-text-bottom" class="meme-text meme-text-bottom" placeholder="Texto inferior..." maxlength="50">
+                        </div>
+
+                        <div class="meme-controls">
+                            <div class="control-group">
+                                <label>Mensajes Predefinidos:</label>
+                                <select id="preset-messages" onchange="applyPresetMessage()">
+                                    <option value="">-- Elige un mensaje --</option>
+                                    <option value="PIENSA ANTES|DE PUBLICAR">Piensa antes de publicar</option>
+                                    <option value="TU CONTRASEÑA|NO SE COMPARTE">Tu contraseña no se comparte</option>
+                                    <option value="VERIFICA LA FUENTE|NO CAIGAS EN FAKE NEWS">Verifica la fuente</option>
+                                    <option value="DENUNCIA EL ACOSO|NO SEAS CÓMPLICE">Denuncia el acoso</option>
+                                    <option value="TU PRIVACIDAD|TU PODER">Tu privacidad, tu poder</option>
+                                    <option value="RESPETO DIGITAL|ES RESPETO REAL">Respeto digital es respeto real</option>
+                                </select>
+                            </div>
+                            <button onclick="downloadMeme()" class="btn-download">📥 Descargar Meme</button>
+                            <button onclick="shareMeme()" class="btn-share-meme">📤 Compartir</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="meme-gallery">
+                    <h4>💡 Galería de Ejemplos</h4>
+                    <div class="gallery-grid">
+                        <div class="gallery-item">
+                            <div class="gallery-meme template-1">
+                                <div class="gallery-icon">🔒</div>
+                                <p class="gallery-text">PIENSA ANTES</p>
+                                <p class="gallery-text">DE COMPARTIR</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-meme template-2">
+                                <div class="gallery-icon">🛡️</div>
+                                <p class="gallery-text">STOP</p>
+                                <p class="gallery-text">CIBERACOSO</p>
+                            </div>
+                        </div>
+                        <div class="gallery-item">
+                            <div class="gallery-meme template-3">
+                                <div class="gallery-icon">🔍</div>
+                                <p class="gallery-text">VERIFICA</p>
+                                <p class="gallery-text">NO CREAS TODO</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
