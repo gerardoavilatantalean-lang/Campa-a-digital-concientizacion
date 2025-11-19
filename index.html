@@ -9,40 +9,47 @@
 
 <body>
 
+    <!-- BARRA DE PROGRESO -->
+    <div id="progress-bar" class="progress-bar"></div>
+
     <header>
         <div class="header-content">
             <h1>🌐 Ciudadanía Digital Responsable</h1>
             <p>Construyendo un internet más seguro, respetuoso y consciente</p>
             <div class="header-stats">
                 <div class="stat">
-                    <span class="stat-number">70%</span>
+                    <span class="stat-number" data-target="70">0</span>%
                     <span class="stat-label">de jóvenes sufren ciberacoso</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">85%</span>
+                    <span class="stat-number" data-target="85">0</span>%
                     <span class="stat-label">comparte datos personales</span>
                 </div>
                 <div class="stat">
-                    <span class="stat-number">60%</span>
+                    <span class="stat-number" data-target="60">0</span>%
                     <span class="stat-label">cree en noticias falsas</span>
                 </div>
             </div>
         </div>
     </header>
 
-    <nav>
-        <a href="#problema">🚨 El Problema</a>
-        <a href="#impacto">📊 Impacto</a>
-        <a href="#videos">🎥 Videos</a>
-        <a href="#propuestas">💡 Soluciones</a>
-        <a href="#recursos">📚 Recursos</a>
-        <a href="#contacto">📞 Ayuda</a>
+    <nav id="main-nav">
+        <div class="nav-container">
+            <a href="#problema">🚨 El Problema</a>
+            <a href="#impacto">📊 Impacto</a>
+            <a href="#videos">🎥 Videos</a>
+            <a href="#propuestas">💡 Soluciones</a>
+            <a href="#recursos">📚 Recursos</a>
+            <a href="#seguridad">🔐 Seguridad</a>
+            <a href="#contacto">🎮 Interactivo</a>
+        </div>
+        <button class="nav-toggle" id="nav-toggle">☰</button>
     </nav>
 
     <!-- ALERTA IMPORTANTE -->
     <div class="alert-banner">
         <span class="alert-icon">⚠️</span>
-        <span>¿Sufres ciberacoso o necesitas ayuda urgente? <a href="#contacto">Contáctanos aquí</a></span>
+        <span>¿Sufres ciberacoso o necesitas ayuda urgente? <a href="#ayuda-urgente">Contáctanos aquí</a></span>
     </div>
 
     <!-- PROBLEMA -->
@@ -53,44 +60,44 @@
         </div>
         
         <div class="problema-grid">
-            <div class="problema-card">
+            <div class="problema-card" data-aos>
                 <div class="icon">🔒</div>
                 <h3>Privacidad Vulnerada</h3>
                 <p>Millones de jóvenes comparten información personal sin conocer los riesgos. Fotos, ubicación, datos familiares quedan expuestos a desconocidos.</p>
             </div>
 
-            <div class="problema-card">
+            <div class="problema-card" data-aos>
                 <div class="icon">😢</div>
                 <h3>Ciberacoso</h3>
                 <p>Insultos, amenazas, humillación pública. El acoso digital no termina al salir de clase, persigue a las víctimas 24/7.</p>
             </div>
 
-            <div class="problema-card">
+            <div class="problema-card" data-aos>
                 <div class="icon">🎭</div>
                 <h3>Suplantación de Identidad</h3>
                 <p>Perfiles falsos, robo de cuentas, difusión de contenido no autorizado que daña la reputación digital.</p>
             </div>
 
-            <div class="problema-card">
+            <div class="problema-card" data-aos>
                 <div class="icon">📰</div>
                 <h3>Desinformación</h3>
                 <p>Noticias falsas, rumores virales, información manipulada que confunde y divide a la comunidad estudiantil.</p>
             </div>
 
-            <div class="problema-card">
+            <div class="problema-card" data-aos>
                 <div class="icon">📱</div>
                 <h3>Adicción Digital</h3>
                 <p>Uso excesivo de dispositivos que afecta el rendimiento escolar, las relaciones sociales y la salud mental.</p>
             </div>
 
-            <div class="problema-card">
+            <div class="problema-card" data-aos>
                 <div class="icon">💔</div>
                 <h3>Conflictos Virtuales</h3>
                 <p>Malentendidos en chats y redes que escalan a problemas reales, afectando la convivencia escolar.</p>
             </div>
         </div>
 
-        <div class="problema-text">
+        <div class="problema-text" data-aos>
             <p><strong>La realidad es preocupante:</strong> Muchos estudiantes no reconocen cuándo están siendo víctimas de manipulación, acoso o engaños virtuales. No saben cómo proteger su información personal ni cómo actuar frente a situaciones de riesgo.</p>
             <p>Este proyecto busca <strong>generar conciencia real</strong> sobre estos peligros y brindar herramientas prácticas para navegar el mundo digital de forma segura, respetuosa y responsable.</p>
         </div>
@@ -104,19 +111,19 @@
         </div>
 
         <div class="impacto-grid">
-            <div class="impacto-card">
+            <div class="impacto-card" data-aos>
                 <div class="impacto-number">1 de cada 3</div>
                 <p>estudiantes ha sido víctima de ciberacoso</p>
             </div>
-            <div class="impacto-card">
+            <div class="impacto-card" data-aos>
                 <div class="impacto-number">45%</div>
                 <p>ha compartido contraseñas con amigos</p>
             </div>
-            <div class="impacto-card">
+            <div class="impacto-card" data-aos>
                 <div class="impacto-number">78%</div>
                 <p>no verifica la veracidad de noticias</p>
             </div>
-            <div class="impacto-card">
+            <div class="impacto-card" data-aos>
                 <div class="impacto-number">50%</div>
                 <p>acepta solicitudes de desconocidos</p>
             </div>
@@ -125,15 +132,15 @@
         <div class="testimonios">
             <h3>Historias Reales</h3>
             <div class="testimonio-grid">
-                <div class="testimonio">
+                <div class="testimonio" data-aos>
                     <p>"Compartí una foto privada con alguien de confianza. Al día siguiente, estaba en todos los grupos del colegio. Me sentí humillada."</p>
                     <span>- Estudiante, 15 años</span>
                 </div>
-                <div class="testimonio">
+                <div class="testimonio" data-aos>
                     <p>"Me crearon un perfil falso con mis fotos y empezaron a escribir cosas horribles. Tarde semanas en recuperar mi reputación."</p>
                     <span>- Estudiante, 16 años</span>
                 </div>
-                <div class="testimonio">
+                <div class="testimonio" data-aos>
                     <p>"Los insultos en el grupo de WhatsApp me afectaban tanto que dejé de ir a clases. Nadie sabía lo que estaba pasando."</p>
                     <span>- Estudiante, 14 años</span>
                 </div>
@@ -153,7 +160,7 @@
         </p>
 
         <div class="video-grid">
-            <div class="video-card">
+            <div class="video-card" data-aos>
                 <div class="video-badge">Esencial</div>
                 <h3>🛡️ Ciberacoso: ¿Cómo identificarlo?</h3>
                 <div class="video-container">
@@ -162,17 +169,17 @@
                 <p class="video-desc">Aprende a reconocer las señales del ciberacoso y qué hacer si tú o alguien cercano es víctima. Video educativo de PantallasAmigas.</p>
             </div>
 
-            <div class="video-card">
+            <div class="video-card" data-aos>
                 <div class="video-badge">Imprescindible</div>
                 <h3>🔍 Desinformación: Detecta las Fake News</h3>
                 <div class="video-container">
-                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/7j6Yv6fGbMs" title="Fake News - Cómo detectar noticias falsas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    <iframe width="100%" height="315" src="https://www.youtube.com/embed/kN_WwN5jDNc" title="Cómo detectar noticias falsas" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
                 <p class="video-desc">Técnicas para verificar información y no caer en noticias falsas que se viralizan en redes. Aprende a ser crítico con lo que ves online.</p>
             </div>
         </div>
 
-        <div class="video-tips">
+        <div class="video-tips" data-aos>
             <h3>💡 Después de ver los videos:</h3>
             <ul>
                 <li>Reflexiona: ¿Has vivido situaciones similares?</li>
@@ -191,7 +198,7 @@
         </div>
 
         <div class="propuesta-list">
-            <div class="propuesta" onclick="toggleInfo('p1')">
+            <div class="propuesta" onclick="toggleInfo('p1')" data-aos>
                 <div class="propuesta-header">
                     <div>
                         <span class="propuesta-icon">🎓</span>
@@ -200,6 +207,9 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div id="p1" class="info">
+                    <div class="info-progress">
+                        <div class="progress-bar-inner" style="width: 75%"></div>
+                    </div>
                     <p><strong>Objetivo:</strong> Capacitar a estudiantes en habilidades digitales esenciales.</p>
                     <p><strong>Contenido:</strong></p>
                     <ul>
@@ -213,7 +223,7 @@
                 </div>
             </div>
 
-            <div class="propuesta" onclick="toggleInfo('p2')">
+            <div class="propuesta" onclick="toggleInfo('p2')" data-aos>
                 <div class="propuesta-header">
                     <div>
                         <span class="propuesta-icon">🚨</span>
@@ -222,6 +232,9 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div id="p2" class="info">
+                    <div class="info-progress">
+                        <div class="progress-bar-inner" style="width: 90%"></div>
+                    </div>
                     <p><strong>Objetivo:</strong> Establecer rutas claras de acción ante casos de ciberacoso.</p>
                     <p><strong>Componentes:</strong></p>
                     <ul>
@@ -236,7 +249,7 @@
                 </div>
             </div>
 
-            <div class="propuesta" onclick="toggleInfo('p3')">
+            <div class="propuesta" onclick="toggleInfo('p3')" data-aos>
                 <div class="propuesta-header">
                     <div>
                         <span class="propuesta-icon">📢</span>
@@ -245,6 +258,9 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div id="p3" class="info">
+                    <div class="info-progress">
+                        <div class="progress-bar-inner" style="width: 60%"></div>
+                    </div>
                     <p><strong>Objetivo:</strong> Mantener la concientización activa durante todo el año escolar.</p>
                     <p><strong>Actividades:</strong></p>
                     <ul>
@@ -258,7 +274,7 @@
                 </div>
             </div>
 
-            <div class="propuesta" onclick="toggleInfo('p4')">
+            <div class="propuesta" onclick="toggleInfo('p4')" data-aos>
                 <div class="propuesta-header">
                     <div>
                         <span class="propuesta-icon">👥</span>
@@ -267,6 +283,9 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div id="p4" class="info">
+                    <div class="info-progress">
+                        <div class="progress-bar-inner" style="width: 80%"></div>
+                    </div>
                     <p><strong>Objetivo:</strong> Brindar información especializada y resolver dudas específicas.</p>
                     <p><strong>Expertos invitados:</strong></p>
                     <ul>
@@ -281,7 +300,7 @@
                 </div>
             </div>
 
-            <div class="propuesta" onclick="toggleInfo('p5')">
+            <div class="propuesta" onclick="toggleInfo('p5')" data-aos>
                 <div class="propuesta-header">
                     <div>
                         <span class="propuesta-icon">🦸</span>
@@ -290,6 +309,9 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div id="p5" class="info">
+                    <div class="info-progress">
+                        <div class="progress-bar-inner" style="width: 70%"></div>
+                    </div>
                     <p><strong>Objetivo:</strong> Crear una red de estudiantes comprometidos con la seguridad digital.</p>
                     <p><strong>Funciones de las brigadas:</strong></p>
                     <ul>
@@ -304,7 +326,7 @@
                 </div>
             </div>
 
-            <div class="propuesta" onclick="toggleInfo('p6')">
+            <div class="propuesta" onclick="toggleInfo('p6')" data-aos>
                 <div class="propuesta-header">
                     <div>
                         <span class="propuesta-icon">📮</span>
@@ -313,6 +335,9 @@
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div id="p6" class="info">
+                    <div class="info-progress">
+                        <div class="progress-bar-inner" style="width: 85%"></div>
+                    </div>
                     <p><strong>Objetivo:</strong> Facilitar la denuncia sin miedo a represalias.</p>
                     <p><strong>Características:</strong></p>
                     <ul>
@@ -337,8 +362,9 @@
         </div>
 
         <div class="recursos-grid">
-            <div class="recurso-card">
-                <h3>🔗 Sitios Confiables</h3>
+            <div class="recurso-card" data-aos>
+                <div class="recurso-icon">🔗</div>
+                <h3>Sitios Confiables</h3>
                 <ul>
                     <li><a href="#" target="_blank">PantallasAmigas</a> - Educación digital</li>
                     <li><a href="#" target="_blank">Internet Segura</a> - Consejos y guías</li>
@@ -346,8 +372,9 @@
                 </ul>
             </div>
 
-            <div class="recurso-card">
-                <h3>📱 Apps Recomendadas</h3>
+            <div class="recurso-card" data-aos>
+                <div class="recurso-icon">📱</div>
+                <h3>Apps Recomendadas</h3>
                 <ul>
                     <li><strong>Qustodio:</strong> Control parental</li>
                     <li><strong>NetNanny:</strong> Filtro de contenido</li>
@@ -355,8 +382,9 @@
                 </ul>
             </div>
 
-            <div class="recurso-card">
-                <h3>📖 Guías Descargables</h3>
+            <div class="recurso-card" data-aos>
+                <div class="recurso-icon">📖</div>
+                <h3>Guías Descargables</h3>
                 <ul>
                     <li>Manual de Privacidad en Redes Sociales</li>
                     <li>Guía Anti-Ciberacoso para Padres</li>
@@ -364,14 +392,164 @@
                 </ul>
             </div>
 
-            <div class="recurso-card">
-                <h3>🎮 Juegos Educativos</h3>
+            <div class="recurso-card" data-aos>
+                <div class="recurso-icon">🎮</div>
+                <h3>Juegos Educativos</h3>
                 <ul>
                     <li>Interland - Google para familias</li>
                     <li>CyberChase - PBS Kids</li>
                     <li>Netsmartz - National Center</li>
                 </ul>
             </div>
+        </div>
+    </section>
+
+    <!-- CENTRO DE SEGURIDAD PERSONAL -->
+    <section id="seguridad" class="section section-seguridad">
+        <div class="section-header">
+            <h2>🔐 Centro de Seguridad Personal</h2>
+            <p class="section-subtitle">Evalúa y mejora tu seguridad digital ahora</p>
+        </div>
+
+        <div class="seguridad-intro">
+            <p>Descubre qué tan seguro estás en el mundo digital. Nuestro análisis te dará un puntaje y recomendaciones personalizadas.</p>
+        </div>
+
+        <!-- ESCÁNER DE CONTRASEÑAS -->
+        <div class="security-module">
+            <div class="module-header">
+                <h3>🔑 Escáner de Contraseñas</h3>
+                <p>Verifica qué tan segura es tu contraseña</p>
+            </div>
+
+            <div class="password-scanner">
+                <div class="input-group">
+                    <input type="password" id="password-input" class="security-input" placeholder="Ingresa una contraseña para analizar...">
+                    <button class="toggle-password" onclick="togglePasswordVisibility()">👁️</button>
+                </div>
+                <button onclick="analyzePassword()" class="btn-analyze">🔍 Analizar Contraseña</button>
+
+                <div id="password-result" class="password-result" style="display: none;">
+                    <div class="strength-bar">
+                        <div id="strength-fill" class="strength-fill"></div>
+                    </div>
+                    <div class="strength-label" id="strength-label"></div>
+                    
+                    <div class="password-details">
+                        <h4>Detalles del Análisis:</h4>
+                        <ul id="password-checks"></ul>
+                    </div>
+
+                    <div class="password-suggestions">
+                        <h4>💡 Sugerencias:</h4>
+                        <ul id="password-suggestions"></ul>
+                    </div>
+
+                    <div class="password-score">
+                        <span class="score-label">Puntuación:</span>
+                        <span id="password-score-value" class="score-value">0</span>
+                        <span class="score-total">/100</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ANÁLISIS DE PRIVACIDAD -->
+        <div class="security-module">
+            <div class="module-header">
+                <h3>📱 Test de Privacidad en Redes</h3>
+                <p>¿Qué tan expuesto estás en redes sociales?</p>
+            </div>
+
+            <div class="privacy-test">
+                <div class="privacy-questions">
+                    <div class="privacy-question">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="privacy-check" data-points="10">
+                            <span>¿Tu perfil es privado?</span>
+                        </label>
+                    </div>
+                    <div class="privacy-question">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="privacy-check" data-points="15">
+                            <span>¿Tienes verificación en 2 pasos activada?</span>
+                        </label>
+                    </div>
+                    <div class="privacy-question">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="privacy-check" data-points="10">
+                            <span>¿Revisas tu configuración de privacidad regularmente?</span>
+                        </label>
+                    </div>
+                    <div class="privacy-question">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="privacy-check" data-points="15">
+                            <span>¿Evitas compartir tu ubicación en publicaciones?</span>
+                        </label>
+                    </div>
+                    <div class="privacy-question">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="privacy-check" data-points="10">
+                            <span>¿Solo aceptas solicitudes de conocidos reales?</span>
+                        </label>
+                    </div>
+                    <div class="privacy-question">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="privacy-check" data-points="10">
+                            <span>¿Desactivas tu estado de conexión?</span>
+                        </label>
+                    </div>
+                    <div class="privacy-question">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="privacy-check" data-points="15">
+                            <span>¿Evitas publicar información personal sensible?</span>
+                        </label>
+                    </div>
+                    <div class="privacy-question">
+                        <label class="checkbox-label">
+                            <input type="checkbox" class="privacy-check" data-points="15">
+                            <span>¿Piensas antes de publicar o compartir contenido?</span>
+                        </label>
+                    </div>
+                </div>
+
+                <button onclick="calculatePrivacyScore()" class="btn-analyze">📊 Calcular Mi Nivel de Privacidad</button>
+
+                <div id="privacy-result" class="privacy-result" style="display: none;">
+                    <div class="privacy-score-display">
+                        <div class="score-circle" id="privacy-circle">
+                            <span id="privacy-score-number">0</span>
+                            <span class="score-suffix">/100</span>
+                        </div>
+                        <div class="privacy-rating" id="privacy-rating"></div>
+                    </div>
+                    <div class="privacy-feedback" id="privacy-feedback"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- RESULTADO GLOBAL -->
+        <div id="global-security" class="global-security" style="display: none;">
+            <div class="global-header">
+                <h3>🎯 Tu Seguridad Digital Global</h3>
+            </div>
+
+            <div class="radar-chart">
+                <canvas id="security-radar"></canvas>
+            </div>
+
+            <div class="global-score">
+                <div class="global-score-number" id="global-score">0</div>
+                <div class="global-score-label">Puntuación Total de Seguridad</div>
+                <div class="global-badge" id="global-badge"></div>
+            </div>
+
+            <div class="action-plan">
+                <h4>📋 Tu Plan de Acción Personalizado:</h4>
+                <ul id="action-items"></ul>
+            </div>
+
+            <button onclick="shareSecurityScore()" class="btn-share-security">📤 Compartir Mi Puntuación</button>
         </div>
     </section>
 
@@ -574,6 +752,37 @@
         </div>
     </section>
 
+    <!-- AYUDA URGENTE -->
+    <section id="ayuda-urgente" class="section section-ayuda">
+        <div class="section-header">
+            <h2>🆘 ¿Necesitas Ayuda Urgente?</h2>
+            <p class="section-subtitle">No estás solo, estamos aquí para ti</p>
+        </div>
+
+        <div class="ayuda-grid">
+            <div class="ayuda-card urgente">
+                <div class="ayuda-icon">🚨</div>
+                <h3>Emergencia</h3>
+                <p>Si estás en peligro inmediato</p>
+                <a href="tel:911" class="btn-ayuda">Llamar al 911</a>
+            </div>
+
+            <div class="ayuda-card">
+                <div class="ayuda-icon">📧</div>
+                <h3>Email Confidencial</h3>
+                <p>Escríbenos tu situación</p>
+                <a href="mailto:ayuda@escuela.edu" class="btn-ayuda">Enviar Email</a>
+            </div>
+
+            <div class="ayuda-card">
+                <div class="ayuda-icon">📞</div>
+                <h3>Línea de Apoyo</h3>
+                <p>Habla con un orientador</p>
+                <a href="tel:0800111222" class="btn-ayuda">0800-111-222</a>
+            </div>
+        </div>
+    </section>
+
     <!-- FOOTER -->
     <footer>
         <div class="footer-content">
@@ -587,20 +796,20 @@
                     <li><a href="#problema">El Problema</a></li>
                     <li><a href="#propuestas">Propuestas</a></li>
                     <li><a href="#recursos">Recursos</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#contacto">Interactivo</a></li>
                 </ul>
             </div>
             <div class="footer-section">
                 <h4>Comparte</h4>
                 <div class="social-links">
-                    <a href="#">Facebook</a>
-                    <a href="#">Twitter</a>
-                    <a href="#">Instagram</a>
+                    <a href="#" class="social-btn">📘 Facebook</a>
+                    <a href="#" class="social-btn">🐦 Twitter</a>
+                    <a href="#" class="social-btn">📷 Instagram</a>
                 </div>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Campaña de Ciudadanía Digital | Todos los derechos reservados</p>
+            <p>&copy; 2025 Campaña de Ciudadanía Digital | Construyendo un internet más seguro</p>
         </div>
     </footer>
 
