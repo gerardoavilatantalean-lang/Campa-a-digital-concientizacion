@@ -24,18 +24,15 @@ function animateValue(element, start, end, duration) {
     window.requestAnimationFrame(step);
 }
 
-// Animar números del header
-document.querySelectorAll('.stat-number').forEach(stat => {
-    const target = parseInt(stat.getAttribute('data-target'));
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                animateValue(stat, 0, target, 2000);
-                observer.unobserve(entry.target);
-            }
-        });
+// Animar números del header AL CARGAR LA PÁGINA
+window.addEventListener('load', () => {
+    document.querySelectorAll('.stat-number').forEach(stat => {
+        const target = parseInt(stat.getAttribute('data-target'));
+        // Esperar 500ms antes de animar para que se vea el efecto
+        setTimeout(() => {
+            animateValue(stat, 0, target, 2000);
+        }, 500);
     });
-    observer.observe(stat);
 });
 
 // =====================
